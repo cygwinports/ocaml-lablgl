@@ -1,0 +1,7 @@
+category: Interpreters X11
+requires: cygwin freeglut libGL1 libGLU1 libXmu6 libncurses8 ocaml tcltk
+sdesc: "OpenGL interface for Objective Caml"
+ldesc: "LablGL is an OpenGL interface for Objective Caml. It includes
+two interfaces: the Togl widget, for comfortable use with LablTk (not
+included in this package), and LablGlut for standalone applications not
+using Tcl/Tk"
