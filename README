@@ -3,21 +3,21 @@ lablgl
 LablGL is an OpenGL interface for Objective Caml.
 
 Runtime requirements:
-  cygwin-1.5.24-2
-  libGL1-6.5.1-1
-  libGLU1-6.5.1-1
+  cygwin-1.5.25-7
+  libGL1-7.0.2-1
+  libGLU1-7.0.2-1
   libX11_6-1.1.1-1
   libXmu6-1.0.3-1
   libglut3-2.4.0-1
   ocaml-3.09.3-1
-  tcl84-8.4.12-1
-  tk84-8.4.12-2
+  tcl-8.4.16-2
+  tk-8.4.16-2
 
 Build requirements:
 (besides corresponding devel packages)
-  cygwin-1.5.24-2
+  cygwin-1.5.25-7
   binutils-20060817-1
-  cygport-0.3.1-1
+  cygport-0.3.7-1
   gcc-core-3.4.4-3
   make-3.81-1
 
@@ -30,15 +30,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack lablgl-1.02-X-src.tar.bz2
+  unpack lablgl-1.03-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./lablgl-1.02-X.cygport all
+  cygport ./lablgl-1.03-X.cygport all
 
 This will create:
-  /usr/src/lablgl-1.02-X-src.tar.bz2
-  /usr/src/lablgl-1.02-X.tar.bz2
+  /usr/src/lablgl-1.03-X-src.tar.bz2
+  /usr/src/lablgl-1.03-X.tar.bz2
 
 -------------------------------------------
 
@@ -142,14 +142,16 @@ Files included in the binary package:
   /usr/lib/ocaml/stublibs/dlllablgl.so
   /usr/lib/ocaml/stublibs/dlllablglut.so
   /usr/lib/ocaml/stublibs/dlltogl.so
-  /usr/share/doc/Cygwin/lablgl-1.02.README
-  /usr/share/doc/lablgl-1.02/COPYRIGHT
-  /usr/share/doc/lablgl-1.02/Changes
-  /usr/share/doc/lablgl-1.02/README
+  /usr/share/doc/lablgl-1.03/COPYRIGHT
+  /usr/share/doc/lablgl-1.03/Changes
+  /usr/share/doc/lablgl-1.03/README
 
 ------------------
 
 Port Notes:
+
+----- version 1.03-1 -----
+Version bump.
 
 ----- version 1.02-2 -----
 Rebuilt for ocaml-3.09 with dynamic plugins.
