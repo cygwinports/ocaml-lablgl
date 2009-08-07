@@ -3,23 +3,25 @@ ocaml-lablgl
 LablGL is an OpenGL interface for Objective Caml.
 
 Runtime requirements:
-  cygwin-1.5.25-7
-  libGL1-7.0.2-1
-  libGLU1-7.0.2-1
-  libX11_6-1.1.1-1
-  libXmu6-1.0.3-1
+  cygwin-1.7.0-56
+  libgcc1-4.3.2-2
+  libGL1-7.4.4-1
+  libGLU1-7.4.4-1
   libglut3-2.4.0-1
-  ocaml-3.10.0-1
-  tcl-8.4.16-2
-  tk-8.4.16-2
+  libX11_6-1.2.2-1
+  libXmu6-1.0.6-10
+  ocaml-3.11.1-1
+  tcl-8.5.6-2
+  tk-8.5.6-1
+  tk-togl-2.0-1
 
 Build requirements:
 (besides corresponding devel packages)
-  cygwin-1.5.25-7
-  binutils-20060817-1
-  cygport-0.3.8-1
-  gcc-core-3.4.4-3
-  make-3.81-1
+  binutils-2.19.51-1
+  cygport-0.9.8-1
+  flexdll-0.19.169-1
+  gcc4-core-4.3.2-2
+  make-3.81-2
 
 Canonical homepage:
   http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/lablgl.html
@@ -30,15 +32,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack ocaml-lablgl-1.03-X-src.tar.bz2
+  unpack ocaml-lablgl-1.04-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./ocaml-lablgl-1.03-X.cygport all
+  cygport ./ocaml-lablgl-1.04-X.cygport all
 
 This will create:
-  /usr/src/ocaml-lablgl-1.03-X-src.tar.bz2
-  /usr/src/ocaml-lablgl-1.03-X.tar.bz2
+  /usr/src/ocaml-lablgl-1.04-X-src.tar.bz2
+  /usr/src/ocaml-lablgl-1.04-X.tar.bz2
 
 -------------------------------------------
 
@@ -46,124 +48,112 @@ Files included in the binary package:
 
   /usr/bin/lablgl
   /usr/bin/lablglut
-  /usr/lib/ocaml/3.10/lablGL/META
-  /usr/lib/ocaml/3.10/lablGL/build.ml
-  /usr/lib/ocaml/3.10/lablGL/gl.cmi
-  /usr/lib/ocaml/3.10/lablGL/gl.cmx
-  /usr/lib/ocaml/3.10/lablGL/gl.ml
-  /usr/lib/ocaml/3.10/lablGL/gl.mli
-  /usr/lib/ocaml/3.10/lablGL/glArray.cmi
-  /usr/lib/ocaml/3.10/lablGL/glArray.cmx
-  /usr/lib/ocaml/3.10/lablGL/glArray.ml
-  /usr/lib/ocaml/3.10/lablGL/glArray.mli
-  /usr/lib/ocaml/3.10/lablGL/glClear.cmi
-  /usr/lib/ocaml/3.10/lablGL/glClear.cmx
-  /usr/lib/ocaml/3.10/lablGL/glClear.ml
-  /usr/lib/ocaml/3.10/lablGL/glClear.mli
-  /usr/lib/ocaml/3.10/lablGL/glDraw.cmi
-  /usr/lib/ocaml/3.10/lablGL/glDraw.cmx
-  /usr/lib/ocaml/3.10/lablGL/glDraw.ml
-  /usr/lib/ocaml/3.10/lablGL/glDraw.mli
-  /usr/lib/ocaml/3.10/lablGL/glFunc.cmi
-  /usr/lib/ocaml/3.10/lablGL/glFunc.cmx
-  /usr/lib/ocaml/3.10/lablGL/glFunc.ml
-  /usr/lib/ocaml/3.10/lablGL/glFunc.mli
-  /usr/lib/ocaml/3.10/lablGL/glLight.cmi
-  /usr/lib/ocaml/3.10/lablGL/glLight.cmx
-  /usr/lib/ocaml/3.10/lablGL/glLight.ml
-  /usr/lib/ocaml/3.10/lablGL/glLight.mli
-  /usr/lib/ocaml/3.10/lablGL/glList.cmi
-  /usr/lib/ocaml/3.10/lablGL/glList.cmx
-  /usr/lib/ocaml/3.10/lablGL/glList.ml
-  /usr/lib/ocaml/3.10/lablGL/glList.mli
-  /usr/lib/ocaml/3.10/lablGL/glMap.cmi
-  /usr/lib/ocaml/3.10/lablGL/glMap.cmx
-  /usr/lib/ocaml/3.10/lablGL/glMap.ml
-  /usr/lib/ocaml/3.10/lablGL/glMap.mli
-  /usr/lib/ocaml/3.10/lablGL/glMat.cmi
-  /usr/lib/ocaml/3.10/lablGL/glMat.cmx
-  /usr/lib/ocaml/3.10/lablGL/glMat.ml
-  /usr/lib/ocaml/3.10/lablGL/glMat.mli
-  /usr/lib/ocaml/3.10/lablGL/glMisc.cmi
-  /usr/lib/ocaml/3.10/lablGL/glMisc.cmx
-  /usr/lib/ocaml/3.10/lablGL/glMisc.ml
-  /usr/lib/ocaml/3.10/lablGL/glMisc.mli
-  /usr/lib/ocaml/3.10/lablGL/glPix.cmi
-  /usr/lib/ocaml/3.10/lablGL/glPix.cmx
-  /usr/lib/ocaml/3.10/lablGL/glPix.ml
-  /usr/lib/ocaml/3.10/lablGL/glPix.mli
-  /usr/lib/ocaml/3.10/lablGL/glTex.cmi
-  /usr/lib/ocaml/3.10/lablGL/glTex.cmx
-  /usr/lib/ocaml/3.10/lablGL/glTex.ml
-  /usr/lib/ocaml/3.10/lablGL/glTex.mli
-  /usr/lib/ocaml/3.10/lablGL/gluMat.cmi
-  /usr/lib/ocaml/3.10/lablGL/gluMat.cmx
-  /usr/lib/ocaml/3.10/lablGL/gluMat.ml
-  /usr/lib/ocaml/3.10/lablGL/gluMat.mli
-  /usr/lib/ocaml/3.10/lablGL/gluMisc.cmi
-  /usr/lib/ocaml/3.10/lablGL/gluMisc.cmx
-  /usr/lib/ocaml/3.10/lablGL/gluMisc.ml
-  /usr/lib/ocaml/3.10/lablGL/gluMisc.mli
-  /usr/lib/ocaml/3.10/lablGL/gluNurbs.cmi
-  /usr/lib/ocaml/3.10/lablGL/gluNurbs.cmx
-  /usr/lib/ocaml/3.10/lablGL/gluNurbs.ml
-  /usr/lib/ocaml/3.10/lablGL/gluNurbs.mli
-  /usr/lib/ocaml/3.10/lablGL/gluQuadric.cmi
-  /usr/lib/ocaml/3.10/lablGL/gluQuadric.cmx
-  /usr/lib/ocaml/3.10/lablGL/gluQuadric.ml
-  /usr/lib/ocaml/3.10/lablGL/gluQuadric.mli
-  /usr/lib/ocaml/3.10/lablGL/gluTess.cmi
-  /usr/lib/ocaml/3.10/lablGL/gluTess.cmx
-  /usr/lib/ocaml/3.10/lablGL/gluTess.ml
-  /usr/lib/ocaml/3.10/lablGL/gluTess.mli
-  /usr/lib/ocaml/3.10/lablGL/glut.cmi
-  /usr/lib/ocaml/3.10/lablGL/glut.cmx
-  /usr/lib/ocaml/3.10/lablGL/glut.ml
-  /usr/lib/ocaml/3.10/lablGL/glut.mli
-  /usr/lib/ocaml/3.10/lablGL/lablgl.a
-  /usr/lib/ocaml/3.10/lablGL/lablgl.cma
-  /usr/lib/ocaml/3.10/lablGL/lablgl.cmxa
-  /usr/lib/ocaml/3.10/lablGL/lablglut.a
-  /usr/lib/ocaml/3.10/lablGL/lablglut.cma
-  /usr/lib/ocaml/3.10/lablGL/lablglut.cmxa
-  /usr/lib/ocaml/3.10/lablGL/liblablgl.a
-  /usr/lib/ocaml/3.10/lablGL/liblablglut.a
-  /usr/lib/ocaml/3.10/lablGL/libtogl.a
-  /usr/lib/ocaml/3.10/lablGL/raw.cmi
-  /usr/lib/ocaml/3.10/lablGL/raw.cmx
-  /usr/lib/ocaml/3.10/lablGL/raw.ml
-  /usr/lib/ocaml/3.10/lablGL/raw.mli
-  /usr/lib/ocaml/3.10/lablGL/togl.a
-  /usr/lib/ocaml/3.10/lablGL/togl.cma
-  /usr/lib/ocaml/3.10/lablGL/togl.cmi
-  /usr/lib/ocaml/3.10/lablGL/togl.cmx
-  /usr/lib/ocaml/3.10/lablGL/togl.cmxa
-  /usr/lib/ocaml/3.10/lablGL/togl.ml
-  /usr/lib/ocaml/3.10/lablGL/togl.mli
-  /usr/lib/ocaml/3.10/stublibs/dlllablgl.so
-  /usr/lib/ocaml/3.10/stublibs/dlllablglut.so
-  /usr/lib/ocaml/3.10/stublibs/dlltogl.so
-  /usr/share/doc/ocaml-lablgl-1.03/COPYRIGHT
-  /usr/share/doc/ocaml-lablgl-1.03/Changes
-  /usr/share/doc/ocaml-lablgl-1.03/README
+  /usr/lib/ocaml/3.11/lablGL/META
+  /usr/lib/ocaml/3.11/lablGL/build.ml
+  /usr/lib/ocaml/3.11/lablGL/gl.cmi
+  /usr/lib/ocaml/3.11/lablGL/gl.cmx
+  /usr/lib/ocaml/3.11/lablGL/gl.ml
+  /usr/lib/ocaml/3.11/lablGL/gl.mli
+  /usr/lib/ocaml/3.11/lablGL/glArray.cmi
+  /usr/lib/ocaml/3.11/lablGL/glArray.cmx
+  /usr/lib/ocaml/3.11/lablGL/glArray.ml
+  /usr/lib/ocaml/3.11/lablGL/glArray.mli
+  /usr/lib/ocaml/3.11/lablGL/glClear.cmi
+  /usr/lib/ocaml/3.11/lablGL/glClear.cmx
+  /usr/lib/ocaml/3.11/lablGL/glClear.ml
+  /usr/lib/ocaml/3.11/lablGL/glClear.mli
+  /usr/lib/ocaml/3.11/lablGL/glDraw.cmi
+  /usr/lib/ocaml/3.11/lablGL/glDraw.cmx
+  /usr/lib/ocaml/3.11/lablGL/glDraw.ml
+  /usr/lib/ocaml/3.11/lablGL/glDraw.mli
+  /usr/lib/ocaml/3.11/lablGL/glFunc.cmi
+  /usr/lib/ocaml/3.11/lablGL/glFunc.cmx
+  /usr/lib/ocaml/3.11/lablGL/glFunc.ml
+  /usr/lib/ocaml/3.11/lablGL/glFunc.mli
+  /usr/lib/ocaml/3.11/lablGL/glLight.cmi
+  /usr/lib/ocaml/3.11/lablGL/glLight.cmx
+  /usr/lib/ocaml/3.11/lablGL/glLight.ml
+  /usr/lib/ocaml/3.11/lablGL/glLight.mli
+  /usr/lib/ocaml/3.11/lablGL/glList.cmi
+  /usr/lib/ocaml/3.11/lablGL/glList.cmx
+  /usr/lib/ocaml/3.11/lablGL/glList.ml
+  /usr/lib/ocaml/3.11/lablGL/glList.mli
+  /usr/lib/ocaml/3.11/lablGL/glMap.cmi
+  /usr/lib/ocaml/3.11/lablGL/glMap.cmx
+  /usr/lib/ocaml/3.11/lablGL/glMap.ml
+  /usr/lib/ocaml/3.11/lablGL/glMap.mli
+  /usr/lib/ocaml/3.11/lablGL/glMat.cmi
+  /usr/lib/ocaml/3.11/lablGL/glMat.cmx
+  /usr/lib/ocaml/3.11/lablGL/glMat.ml
+  /usr/lib/ocaml/3.11/lablGL/glMat.mli
+  /usr/lib/ocaml/3.11/lablGL/glMisc.cmi
+  /usr/lib/ocaml/3.11/lablGL/glMisc.cmx
+  /usr/lib/ocaml/3.11/lablGL/glMisc.ml
+  /usr/lib/ocaml/3.11/lablGL/glMisc.mli
+  /usr/lib/ocaml/3.11/lablGL/glPix.cmi
+  /usr/lib/ocaml/3.11/lablGL/glPix.cmx
+  /usr/lib/ocaml/3.11/lablGL/glPix.ml
+  /usr/lib/ocaml/3.11/lablGL/glPix.mli
+  /usr/lib/ocaml/3.11/lablGL/glTex.cmi
+  /usr/lib/ocaml/3.11/lablGL/glTex.cmx
+  /usr/lib/ocaml/3.11/lablGL/glTex.ml
+  /usr/lib/ocaml/3.11/lablGL/glTex.mli
+  /usr/lib/ocaml/3.11/lablGL/gluMat.cmi
+  /usr/lib/ocaml/3.11/lablGL/gluMat.cmx
+  /usr/lib/ocaml/3.11/lablGL/gluMat.ml
+  /usr/lib/ocaml/3.11/lablGL/gluMat.mli
+  /usr/lib/ocaml/3.11/lablGL/gluMisc.cmi
+  /usr/lib/ocaml/3.11/lablGL/gluMisc.cmx
+  /usr/lib/ocaml/3.11/lablGL/gluMisc.ml
+  /usr/lib/ocaml/3.11/lablGL/gluMisc.mli
+  /usr/lib/ocaml/3.11/lablGL/gluNurbs.cmi
+  /usr/lib/ocaml/3.11/lablGL/gluNurbs.cmx
+  /usr/lib/ocaml/3.11/lablGL/gluNurbs.ml
+  /usr/lib/ocaml/3.11/lablGL/gluNurbs.mli
+  /usr/lib/ocaml/3.11/lablGL/gluQuadric.cmi
+  /usr/lib/ocaml/3.11/lablGL/gluQuadric.cmx
+  /usr/lib/ocaml/3.11/lablGL/gluQuadric.ml
+  /usr/lib/ocaml/3.11/lablGL/gluQuadric.mli
+  /usr/lib/ocaml/3.11/lablGL/gluTess.cmi
+  /usr/lib/ocaml/3.11/lablGL/gluTess.cmx
+  /usr/lib/ocaml/3.11/lablGL/gluTess.ml
+  /usr/lib/ocaml/3.11/lablGL/gluTess.mli
+  /usr/lib/ocaml/3.11/lablGL/glut.cmi
+  /usr/lib/ocaml/3.11/lablGL/glut.cmx
+  /usr/lib/ocaml/3.11/lablGL/glut.ml
+  /usr/lib/ocaml/3.11/lablGL/glut.mli
+  /usr/lib/ocaml/3.11/lablGL/lablgl.a
+  /usr/lib/ocaml/3.11/lablGL/lablgl.cma
+  /usr/lib/ocaml/3.11/lablGL/lablgl.cmxa
+  /usr/lib/ocaml/3.11/lablGL/lablglut.a
+  /usr/lib/ocaml/3.11/lablGL/lablglut.cma
+  /usr/lib/ocaml/3.11/lablGL/lablglut.cmxa
+  /usr/lib/ocaml/3.11/lablGL/liblablgl.a
+  /usr/lib/ocaml/3.11/lablGL/liblablglut.a
+  /usr/lib/ocaml/3.11/lablGL/libtogl.a
+  /usr/lib/ocaml/3.11/lablGL/raw.cmi
+  /usr/lib/ocaml/3.11/lablGL/raw.cmx
+  /usr/lib/ocaml/3.11/lablGL/raw.ml
+  /usr/lib/ocaml/3.11/lablGL/raw.mli
+  /usr/lib/ocaml/3.11/lablGL/togl.a
+  /usr/lib/ocaml/3.11/lablGL/togl.cma
+  /usr/lib/ocaml/3.11/lablGL/togl.cmi
+  /usr/lib/ocaml/3.11/lablGL/togl.cmx
+  /usr/lib/ocaml/3.11/lablGL/togl.cmxa
+  /usr/lib/ocaml/3.11/lablGL/togl.ml
+  /usr/lib/ocaml/3.11/lablGL/togl.mli
+  /usr/lib/ocaml/3.11/stublibs/dlllablgl.so
+  /usr/lib/ocaml/3.11/stublibs/dlllablglut.so
+  /usr/lib/ocaml/3.11/stublibs/dlltogl.so
+  /usr/share/doc/ocaml-lablgl/COPYRIGHT
+  /usr/share/doc/ocaml-lablgl/README
 
 ------------------
 
 Port Notes:
 
------ version 1.03-1 -----
-Version bump, built for OCaml 3.10.
-
------ version 1.02-2 -----
-Rebuilt for ocaml-3.09 with dynamic plugins.
-
------ version 1.02-1 -----
-Version bump.
-
------ version 1.00-1 -----
-Initial release for Cygwin.
-This package includes only the X11 GL/GLU/glut interfaces;
-the Togl interface doesn't seem to work properly with the Win32 tcltk.
+----- version 1.04-1 -----
+Initial release for OCaml 3.11 on Cygwin 1.7.
 
 
 Cygwin port maintained by:

@@ -1,0 +1,52 @@
+inherit tcl ocaml
+
+DESCRIPTION="OCaml OpenGL bindings"
+HOMEPAGE="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/lablgl.html"
+SRC_URI="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/lablgl-${PV}.tar.gz"
+SRC_DIR="lablGL-${PV}"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	ln -sf Makefile.config.ex Makefile.config
+
+	cygmake -j1 all opt \
+		CAMLC=${OCAMLC} \
+		CAMLOPT=${OCAMLOPT} \
+		BINDIR=/usr/bin \
+		XINCLUDES=""  \
+		XLIBS="-lXi -lXmu -lXext -lX11" \
+		TKINCLUDES="-I${TCL_INCLUDEDIR}" \
+		TKLIBS="${LIBTK} ${LIBTCL}" \
+		RANLIB=ranlib \
+		XE=".exe"
+}
+
+src_install() {
+	cd ${B}
+	dodir /usr/bin ${OCAML_STUBDIR}
+
+	cyginstall -j1 \
+		BINDIR=${D}/usr/bin \
+		INSTALLDIR=${D}${OCAML_LIBDIR}/lablGL \
+		DLLDIR=${D}${OCAML_STUBDIR}
+
+	cat > ${D}${OCAML_LIBDIR}/lablGL/META <<-_EOF
+		version="${PV}"
+		directory="+lablGL"
+		archive(byte) = "lablgl.cma"
+		archive(native) = "lablgl.cmxa"
+
+		package "togl" (
+		  requires = "labltk lablgl"
+		  archive(byte) = "togl.cma"
+		  archive(native) = "togl.cmxa"
+		)
+
+		package "glut" (
+		  requires = "lablgl"
+		  archive(byte) = "lablglut.cma"
+		  archive(native) = "lablglut.cmxa"
+		)
+	_EOF
+}
