@@ -38,13 +38,13 @@ src_install() {
 		archive(native) = "lablgl.cmxa"
 
 		package "togl" (
-		  requires = "labltk lablgl"
+		  requires = "labltk lablGL"
 		  archive(byte) = "togl.cma"
 		  archive(native) = "togl.cmxa"
 		)
 
 		package "glut" (
-		  requires = "lablgl"
+		  requires = "lablGL"
 		  archive(byte) = "lablglut.cma"
 		  archive(native) = "lablglut.cmxa"
 		)
