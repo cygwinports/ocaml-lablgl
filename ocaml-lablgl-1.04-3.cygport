@@ -10,7 +10,7 @@ src_compile() {
 	cd ${B}
 	ln -sf Makefile.config.ex Makefile.config
 
-	cygmake -j1 all opt \
+	cygmake -j1 lib libopt glut glutopt \
 		CAMLC=${OCAMLC} \
 		CAMLOPT=${OCAMLOPT} \
 		BINDIR=/usr/bin \
