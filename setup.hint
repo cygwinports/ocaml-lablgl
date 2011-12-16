@@ -1,5 +1,5 @@
 category: OCaml X11
-requires: libGL1 libGL-devel libGLU1 libGLU-devel libglut3 libglut-devel ocaml-base
+requires: libGL1 libGL-devel libGLU1 libGLU-devel libglut3 libglut-devel libX11_6 libX11-devel libXmu6 libXmu-devel ocaml-base ocaml-labltk tcl tcl-tk
 sdesc: "OpenGL interface for Objective Caml"
 ldesc: "LablGL is an OpenGL interface for Objective Caml. It includes
 two interfaces: the Togl widget, for comfortable use with LablTk (not
