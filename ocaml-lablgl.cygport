@@ -1,9 +1,16 @@
 inherit tcl ocaml
 
-DESCRIPTION="OCaml OpenGL bindings"
+NAME="ocaml-lablgl"
+VERSION=1.04
+RELEASE=4
+CATEGORY="Libs"
+SUMMARY="OpenGL interface for Objective Caml"
+DESCRIPTION="LablGL is an OpenGL interface for Objective Caml. It includes two
+interfaces: the Togl widget, for comfortable use with LablTk, and LablGlut for
+standalone applications not using Tcl/Tk"
 HOMEPAGE="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/lablgl.html"
-SRC_URI="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/lablgl-${PV}.tar.gz"
-SRC_DIR="lablGL-${PV}"
+SRC_URI="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/lablgl-${VERSION}.tar.gz"
+SRC_DIR="lablGL-${VERSION}"
 
 src_compile() {
 	lndirs
@@ -32,7 +39,7 @@ src_install() {
 		DLLDIR=${D}${OCAML_STUBDIR}
 
 	cat > ${D}${OCAML_LIBDIR}/lablGL/META <<-_EOF
-		version="${PV}"
+		version="${VERSION}"
 		directory="+lablGL"
 		archive(byte) = "lablgl.cma"
 		archive(native) = "lablgl.cmxa"
