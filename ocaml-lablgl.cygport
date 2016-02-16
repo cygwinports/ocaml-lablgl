@@ -2,7 +2,7 @@ inherit tcl ocaml
 
 NAME="ocaml-lablgl"
 VERSION=1.05
-RELEASE=1
+RELEASE=2
 CATEGORY="Libs"
 SUMMARY="OpenGL interface for Objective Caml"
 DESCRIPTION="LablGL is an OpenGL interface for Objective Caml. It includes two
